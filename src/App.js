@@ -6,6 +6,9 @@ import Product from './components/Product';
 import products from './data/products';
 import Cart from './components/Cart';
 
+
+
+
 function App() {
   const dispatch = useDispatch();
   // const counter = useSelector(state => state.counter.value);
@@ -15,12 +18,13 @@ function App() {
       {/* <h1>Counter: {counter}</h1>
       <button onClick={() => dispatch(increment())}>Increment</button>
       <button onClick={() => dispatch(decrement())}>Decrement</button> */}
-        <Cart/>
+       <Cart />
       <h1>Products</h1>
       {products.map(product => (
-        <Product key={product.id} id={product.id} name={product.name} price={product.price} />
+        <Product key={product.id} id={product.id} name={product.name} price={product.price} image={product.image}/>
       ))}
-    
+
+
     </div>
   );
 }
