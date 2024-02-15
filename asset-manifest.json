@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-redux-app/static/css/main.8a63d79d.css",
+    "main.js": "/react-redux-app/static/js/main.381e3a95.js",
+    "static/media/productA.jpg": "/react-redux-app/static/media/productA.1276ae8b140ca7505434.jpg",
+    "index.html": "/react-redux-app/index.html",
+    "main.8a63d79d.css.map": "/react-redux-app/static/css/main.8a63d79d.css.map",
+    "main.381e3a95.js.map": "/react-redux-app/static/js/main.381e3a95.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a63d79d.css",
+    "static/js/main.381e3a95.js"
+  ]
+}
