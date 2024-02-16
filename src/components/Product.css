@@ -8,7 +8,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  
+ 
   .product-image {
     width: 100px; /* Adjust image size as needed */
     height: auto;
@@ -41,3 +41,18 @@
     background-color: #0056b3;
   }
   
+
+/*copyright css */
+.copyright {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.copyright span {
+  font-style: italic;
+  color: #333;
+}
