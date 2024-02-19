@@ -1,5 +1,7 @@
 // Product.js
 import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../features/cartSlice';
 import './Product.css';
@@ -18,6 +20,7 @@ const Product = ({ id, name, price }) => {
 
   const handleAddToCart = () => {
     dispatch(addItem({ id, name, price }));
+    toast.success(`${name} added to cart!`);
     console.log('Add to cart button clicked for product:', { id, name, price });
   };
 
