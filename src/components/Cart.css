@@ -8,10 +8,10 @@
 
 
 .cart {
+  margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 2rem;
   }
   
   .cart h2 {
@@ -30,7 +30,7 @@
   }
   
   .cart-item-image {
-    width: 80px; /* Adjust image size as needed */
+    width: 80px; 
     height: auto;
     margin-right: 20px;
     border-radius: 5px;
@@ -68,5 +68,12 @@
   
   .cart button:hover {
     background-color: #0056b3;
+  }
+
+  .cart-icon-container{
+    float: right;
+    margin-top: -10px;
+    font-size: larger;
+    padding: 5px;
   }
   

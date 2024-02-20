@@ -8,8 +8,23 @@ import { Link } from 'react-router-dom';
 function App() {
   return (
     <div>
+<h1 style={{ 
+  textAlign: 'center', 
+  fontFamily: 'Arial, sans-serif', 
+  color: 'rgba(50, 50, 50, 0.9)', /* Dark gray color with slight transparency */
+  fontSize: '3rem', /* Large font size */
+  fontWeight: 'bold', 
+  textTransform: 'uppercase', 
+  letterSpacing: '2px', 
+  animation: 'spin 5s linear infinite',
+  width: '100%', /* Make it full width */
+  maxWidth: '800px', /* Limit maximum width to 800px */
+  margin: '20px auto' /* Center horizontally with some top and bottom margin */
+}}>
+  All Products
+</h1>
       <Cart />
-      <h1 style={{ textAlign: 'center' }}>All Products</h1>
+     
       {products.map(product => (
         <Product key={product.id} id={product.id} name={product.name} price={product.price} image={product.image} />
       ))}

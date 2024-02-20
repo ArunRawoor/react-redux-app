@@ -56,3 +56,25 @@
   font-style: italic;
   color: #333;
 }
+
+
+
+
+
+.star-rating {
+  margin-top: 10px;
+}
+
+.rating-label {
+  font-weight: bold;
+}
+
+.stars {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.star {
+  color: #FFD700; /* Yellow color for filled stars */
+}
+

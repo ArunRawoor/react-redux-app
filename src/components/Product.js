@@ -1,19 +1,10 @@
-// Product.js
 import React from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../features/cartSlice';
 import './Product.css';
-
-// Import your images statically
-import ProductImageA from '../Images/productA.jpg';
-import ProductImageB from '../Images/productB.jpeg';
-import ProductImageC from '../Images/productC.jpeg';
-import ProductImageD from '../Images/productD.jpeg';
-import ProductImageE from '../Images/productE.jpeg';
-import ProductImageF from '../Images/productF.jpeg';
-
+import products from '../data/products'; // Import products data
 
 const Product = ({ id, name, price }) => {
   const dispatch = useDispatch();
@@ -24,35 +15,38 @@ const Product = ({ id, name, price }) => {
     console.log('Add to cart button clicked for product:', { id, name, price });
   };
 
-  // Function to get the image for a specific product
-  const getImageForProduct = (productId) => {
-    switch (productId) {
-      case 1:
-        return ProductImageA;
-      case 2:
-        return ProductImageB;
-      case 3:
-        return ProductImageC;
-      case 4:
-        return ProductImageD;
-      case 5:
-        return ProductImageE;
-      case 6:
-        return ProductImageF;
-      default:
-        return null;
-    }
+  const getProductById = (productId) => {
+    return products.find(product => product.id === productId);
   };
 
-  // Get the image for the current product
-  const productImage = getImageForProduct(id);
+  const product = getProductById(id);
+
+  // Function to render star rating
+  const renderStarRating = (rating) => {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      if (i < rating) {
+        stars.push(<span key={i} className="star">&#9733;</span>);
+      } else {
+        stars.push(<span key={i} className="star">&#9734;</span>);
+      }
+    }
+    return stars;
+  };
 
   return (
     <div className="product">
-      <img className="product-image" src={productImage} alt={name} />
+      <img className="product-image" src={product.image} alt={name} />
       <div className="product-details">
         <h3>{name}</h3>
         <p>Price: ₹{price}</p>
+        {/* <p>Description: {product.description}</p> */}
+        <div className="star-rating">
+          <span className="rating-label">Rating: </span>
+          <div className="stars">
+            {renderStarRating(product.rating)}
+          </div>
+        </div>
         <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
     </div>
